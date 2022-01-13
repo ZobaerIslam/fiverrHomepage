@@ -12,6 +12,7 @@
     --color-brown-dark: #45091B;
 
     --color-text-default: #62646a;
+    --color-black-text: #222325;
     --color-heading-black: #404145;
 }
 
@@ -182,6 +183,9 @@ body {
   display: flex;
 }
 
+/* -------------------------------------------------------- */
+
+/* SELLING PROPOSITION START */
 .selling__proposition {
   width: 100%;
   background-color: #f1fdf7;
@@ -272,8 +276,90 @@ body {
   cursor: pointer;
 }
 
+/* SELLING PROPOSITION END */
+
+/* -------------------------------------------------- */
+
+/* MARKETPLACE START */
+.marketplace {
+  width: 100%;
+}
+
+.marketplace .main__container {
+  padding: 0;
+  padding-bottom: 2rem;
+}
+
+.marketplace .main__container__wrapper {
+  margin: 0;
+}
+
+/* .main_container__tight {
+} */
+
+/* .marketplace__content {
+
+} */
+
+.marketplace__content--h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 4rem;
+  color: var(--color-heading-black);
+  padding-bottom: 2.4rem;
+  margin-bottom: 4rem;
+}
+
+.marketplace__content__items {
+  list-style: none;
+  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.marketplace__content__item {
+  width: 20%;
+  padding: 0 1rem;
+  padding-bottom: 5.5rem;
+  text-align: center;
+}
+
+.marketplace__content--link {
+  text-decoration: none;
+  color: var(--color-black-text);
+  display: inline-block;
+  position: relative;
+
+  /* transition: color .2s; */
+}
 
 
+.marketplace__content--link::after { 
+  content: "";
+  
+  width: 4.8rem;
+  border-bottom: 2px solid #c5c6c9;
+  padding-bottom: .8rem;
+  
+  position: absolute;
+  top: 4.5rem;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.marketplace__content--link:hover::after {
+  border-color: var(--color-green);
+  padding: 0 4rem .8rem;
+  transition: padding .2s ease-in-out, border-color .2s ease-in-out;
+}
+
+.marketplace__content--logo {
+  display: block;
+  width: 4.8rem;
+  height: 4.8rem;
+  margin: 0 auto 1.5rem;
+}
+/* MARKETPLACE END */
 
 
 
@@ -326,6 +412,7 @@ body {
     flex-direction: column;
   }
 
+  /* SELLING PROPOSITION START */
   .selling__proposition__content {
     flex: 0 1 100%;
   }
@@ -347,6 +434,13 @@ body {
   .selling__proposition__wrapper {
     width: 100%;
   }
+  /* SELLING PROPOSITION END */
+
+  /* MARKETPLACE START */
+  .marketplace__content__item {
+    width: 33.33%;
+  }
+  /* MARKETPLACE END */
 }
 
 
@@ -355,4 +449,19 @@ body {
   html {
     font-size: 56.25%;  /*1rem = 9px*/
   }
+
+  /* SELLING PROPOSITION START */
+  .selling__proposition { 
+    margin-bottom: 4.8rem;
+  }
+
+  /* SELLING PROPOSITION END */
+
+  /* MARKETPLACE START */
+  .marketplace__content__item {
+    width: 50%;
+    padding: 0 1rem 3.2rem;
+  }
+
+  /* MARKETPLACE END */
 }
