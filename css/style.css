@@ -14,6 +14,8 @@
     --color-text-default: #62646a;
     --color-black-text: #222325;
     --color-heading-black: #404145;
+
+    --flex-column-gap: 3.2rem;
 }
 
 * {
@@ -574,8 +576,119 @@ body {
 
 /* -------------------------------------------------------------- */
 
+/* FIVERR GUIDES START */
+.fiverr__guides {
+  width: 100%;
+}
+
+.fiverr__guides .main__container {
+  padding-top: 0;
+}
+
+.main__container__wrapper {
+}
+
+.main__container__tight {
+}
+
+.fiverr__guides__content {
+  width: 100%;
+  position: relative;
+}
+
+.fiverr__guides--h2 {
+  font-size: 3.2rem;
+  line-height: 120%;
+  font-weight: 700;
+  color: var(--color-heading-black);
+  display: inline-block;
+  padding-bottom: 2.4rem;
+}
+
+.fiverr__guides__cards {
+  display: flex;
+  justify-content: space-between;
+  /* flex-flow: row wrap; */
+  /* gap: var(--flex-column-gap); */
+
+  /* margin: calc(-1 * var(--flex-column-gap)) 0 0 calc(-1 * var(--flex-column-gap));
+  width: calc(100% + var(--flex-column-gap)); */
+}
 
 
+.fiverr__guides__card--link {
+  text-decoration: none;
+  cursor: pointer;
+  flex-basis: 32%;
+  /* margin: var(--flex-column-gap) 0 0 var(--flex-column-gap); */
+  /* max-width: calc(33.33333% - var(--flex-column-gap)); */
+}
+
+/* .fiverr__guides__card--link:not(:first-child) {
+  margin-left: 1.6rem;
+}
+.fiverr__guides__card--link:not(:last-child) {
+  margin-right: 1.6rem;
+} */
+
+.fiverr__guides__card__pictures {
+  /* width: 100%; */
+}
+
+.fiverr__guides__card--image {
+  margin-bottom: 1.6rem;
+  border-radius: 4px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity .3s ease-in-out;
+}
+
+.fiverr__guides__card--image:hover {
+  opacity: .85;
+}
+
+.fiverr__guides__card--h6 {
+  font-size: 1.8rem;
+  line-height: 140%;
+  font-weight: 700;
+  color: var(--color-heading-black);
+  padding-bottom: 2px;
+}
+
+.fiverr__guides__card--p {
+  color: #7a7d85;
+}
+
+.fiverr__text--link {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  color: var(--color-blue-1);
+  text-decoration: none;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 1.2rem;
+
+  transition: color .2s;
+
+  display: flex;
+  align-items: center;
+}
+
+.fiverr__text--link:hover {
+  color: var(--color-blue-2);
+}
+
+.fiverr__navi__right--icon{
+  display: inline-block;
+  margin-left: 1rem;
+  margin-top: 3px;
+  font-size: 1rem;
+}
+
+/* FIVERR GUIDES END */
 
 
 
@@ -651,6 +764,12 @@ body {
     padding-left: 3.2rem;
   }
   /* LOGO MAKER END */
+
+  /* FIVERR GUIDES START */
+  .fiverr__guides__cards {
+    --flex-column-gap: 1.6rem;
+  }
+  /* FIVERR GUIDES END */
 }
 
 /* 1000px */
@@ -747,6 +866,24 @@ body {
   /* BUSINESS END */
 
 
+  /* FIVERR GUIDES START */
+  .fiverr__guides__cards {
+    flex-wrap: wrap;
+    /* --flex-column-gap: 1.6rem; */
+  }
+
+  .fiverr__guides__card--link {
+    flex-basis: 49%;
+    /* max-width: 50%; */
+    margin-bottom: 3.2rem;
+  }
+
+  .fiverr__text--link {
+    position: static;
+  }
+  /* FIVERR GUIDES END */
+
+
 }
 
 
@@ -776,5 +913,16 @@ body {
     padding: 0;
   }
   /* LOGO MAKER END */
+
+  /* FIVERR GUIDES START */
+  .fiverr__guides__cards { 
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .fiverr__guides__card--link {
+    flex-basis: 100%;
+  }
+  /* FIVERR GUIDES END */
 
 }
